@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d6f7e7;
+            color: #2c4b44;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c4b44;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #2c4b44;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4a4a4a;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            background-color: #d6f7e7;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #2c4b44;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            background-color: #2c4b44;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #23413a;
+        }
+        div {
+            margin: 0px auto;
+            width:400px;
+        }
+        h1 {
+        text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #2c4b44;
+            color: white;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar la App</title>
+    <script>
+        function redirigir() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Verificar si el dispositivo es iOS
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Redirigir a la App Store
+                window.location.href = "https://apps.apple.com/app/id6723900037";
+            }
+            // Verificar si el dispositivo es Android
+            else if (/android/i.test(userAgent)) {
+                // Redirigir a la Play Store
+                window.location.href = "https://play.google.com/store/apps/details?id=com.law.justice.legalassistant"; // Reemplaza TU_ID con el ID de tu app en la Play Store
+            } else {
+                // Si no es ni Android ni iOS
+                document.body.innerHTML = "<div><h1>Por favor, abre esta página en un dispositivo móvil.</h1></div>";
+            }
+        }
+        window.onload = redirigir;
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Redirigiendo...</h1>
+        <p>Si no eres redirigido automáticamente, haz clic <a href="#" onclick="redirigir()">aquí</a>.</p>
+    </div>
+</body>
+</html>
